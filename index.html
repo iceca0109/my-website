@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUHAO WU (吳予皓) | NTHU CS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; scroll-behavior: smooth; }
+        .section-title { @apply text-2xl font-bold border-b-2 border-blue-600 pb-2 mb-6 text-gray-800 flex justify-between items-center; }
+        .nav-link { @apply block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-all; }
+        [data-lang="en"] { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 leading-relaxed">
+
+    <!-- 語言切換按鈕 -->
+    <div class="fixed top-6 right-6 z-50">
+        <button onclick="toggleLanguage()" class="bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full font-bold text-blue-600 hover:bg-blue-50 transition-all flex items-center gap-2">
+            <i class="fas fa-globe"></i>
+            <span id="langBtnText">English / 中文</span>
+        </button>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 py-10">
+        <div class="flex flex-col md:flex-row gap-12">
+            
+            <!-- 左側邊欄 -->
+            <aside class="md:w-1/3 lg:w-1/4">
+                <div class="sticky top-10">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center md:text-left">
+                        <div class="w-40 h-40 mx-auto md:mx-0 bg-gray-200 rounded-xl mb-6 overflow-hidden border-4 border-white shadow-sm">
+                            <img src="https://ui-avatars.com/api/?name=Yuhao+Wu&background=0D8ABC&color=fff&size=256" alt="YUHAO WU" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <h1 class="text-3xl font-bold text-gray-800 mb-1">YUHAO WU</h1>
+                        <p class="text-xl text-blue-600 font-medium mb-4">吳予皓</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p class="flex items-start">
+                                <i class="fas fa-graduation-cap mt-1 mr-3 text-blue-500"></i>
+                                <span>
+                                    <span data-lang="zh">國立清華大學<br>資訊工程研究所 (碩士班)</span>
+                                    <span data-lang="en">National Tsing Hua University<br>M.S. in Computer Science</span>
+                                </span>
+                            </p>
+                            <p class="flex items-center text-gray-400">
+                                <i class="fas fa-university mr-3"></i>
+                                <span>
+                                    <span data-lang="zh">國立臺南大學 (學士畢)</span>
+                                    <span data-lang="en">National University of Tainan (B.S.)</span>
+                                </span>
+                            </p>
+                            <p><i class="fas fa-envelope mr-3 text-blue-500"></i>icecawu@gmail.com</p>
+                            <p><i class="fab fa-github mr-3 text-blue-500"></i><a href="https://github.com/iceca0109" class="hover:underline">github.com/iceca0109</a></p>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-gray-100">
+                            <nav class="space-y-1">
+                                <a href="#about" class="nav-link"><i class="fas fa-user w-6"></i><span data-lang="zh">關於我</span><span data-lang="en">About</span></a>
+                                <a href="#research" class="nav-link"><i class="fas fa-book-open w-6"></i><span data-lang="zh">學術研究</span><span data-lang="en">Research</span></a>
+                                <a href="#projects" class="nav-link"><i class="fas fa-code w-6"></i><span data-lang="zh">專案開發</span><span data-lang="en">Projects</span></a>
+                                <a href="#skills" class="nav-link"><i class="fas fa-tools w-6"></i><span data-lang="zh">技術技能</span><span data-lang="en">Skills</span></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 右側主內容區 -->
+            <main class="md:w-2/3 lg:w-3/4">
+                
+                <!-- About Section -->
+                <section id="about" class="mb-16">
+                    <h2 class="section-title">
+                        <span data-lang="zh">關於我</span><span data-lang="en">About Me</span>
+                    </h2>
+                    <div class="text-lg text-gray-700 mb-6 text-justify">
+                        <div data-lang="zh">
+                            <p>你好！我是吳予皓。目前即將就讀於<b>國立清華大學資工所</b>。我的學術研究重心正在轉向<b>串流演算法 (Streaming Algorithms)</b>，致力於解決大規模數據流中的高效計算與資源優化問題。</p>
+                            <p class="mt-4">我擁有深厚的演算法競賽背景（LeetCode 1867 分，全球前 5.4%），這使我能以敏銳的邏輯思維應對複雜的理論挑戰與系統實作。</p>
+                        </div>
+                        <div data-lang="en">
+                            <p>Hi, I'm YUHAO WU, an incoming M.S. student at <b>National Tsing Hua University (NTHU CS)</b>. My research interest is shifting towards <b>Streaming Algorithms</b>, focusing on efficient computation and resource optimization for massive data streams.</p>
+                            <p class="mt-4">With a strong background in competitive programming (LeetCode Rating 1867, Top 5.4%), I apply rigorous algorithmic thinking to both theoretical challenges and system implementations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-800 mb-2">
+                                <span data-lang="zh">研究興趣</span><span data-lang="en">Research Interests</span>
+                            </h3>
+                            <ul class="list-disc list-inside text-sm space-y-1 text-blue-900 opacity-90">
+                                <li class="font-bold italic">Streaming Algorithms</li>
+                                <li>Big Data Computation</li>
+                                <li>Algorithm Analysis & Design</li>
+                                <li>Computer Vision (Previous Focus)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Research & Publications -->
+                <section id="research" class="mb-16">
+                    <h2 class="section-title">
+                        <span data-lang="zh">學術研究</span><span data-lang="en">Research & Publications</span>
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="relative pl-8 border-l-4 border-blue-600">
+                            <span class="absolute -left-2.5 top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-sm"></span>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase">NCS 2025</span>
+                                <span class="text-sm font-semibold text-gray-500">Conference Paper</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">A Real-Time Cat Behavior Recognition System Based on ViViT</h3>
+                            <p class="text-gray-500 text-sm mb-3 italic text-blue-600">Yuhao Wu, et al.</p>
+                            <div class="text-gray-700 text-sm leading-relaxed">
+                                <span data-lang="zh">此項研究展示了我處理即時數據流與系統優化的能力。結合 YOLOv11 與 ViViT 架構，我開發了一套高效的多目標行為識別系統，並透過多執行緒機制優化了運算流水線。</span>
+                                <span data-lang="en">This research demonstrates my capability in handling real-time data streams and system optimization. By integrating YOLOv11 and ViViT architectures, I developed an efficient behavior recognition system and optimized the computational pipeline using multi-threading.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" class="mb-16">
+                    <h2 class="section-title">
+                        <span data-lang="zh">精選專案與成就</span><span data-lang="en">Selected Projects & Achievements</span>
+                    </h2>
+                    <div class="grid grid-cols-1 gap-6">
+                        <!-- LeetCode Card -->
+                        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg text-white">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="text-xl font-bold flex items-center gap-2">
+                                    <i class="fas fa-code text-yellow-500"></i>
+                                    <span data-lang="zh">演算法能力</span><span data-lang="en">Algorithm Proficiency</span>
+                                </h3>
+                                <a href="https://leetcode.com/iceca0109" target="_blank" class="text-xs bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition">LeetCode Profile <i class="fas fa-external-link-alt ml-1"></i></a>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <div>
+                                    <p class="text-4xl font-black text-yellow-500">1867</p>
+                                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Contest Rating</p>
+                                </div>
+                                <div class="h-12 w-px bg-white/20"></div>
+                                <div>
+                                    <p class="text-4xl font-black text-blue-400">Top 5.4%</p>
+                                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Global Ranking</p>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-xs text-gray-400 leading-relaxed italic">
+                                <span data-lang="zh">具備極強的邏輯推導能力，熟練應用動態規劃、圖論、滑動窗口等技術解決大規模資料處理問題。</span>
+                                <span data-lang="en">Strong logical reasoning skills with proficiency in dynamic programming, graph theory, and sliding window techniques to solve large-scale data problems.</span>
+                            </p>
+                        </div>
+
+                        <!-- Project 1 -->
+                        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold">Speech Emotion Recognition (SER)</h3>
+                                <span class="bg-gray-100 text-gray-600 text-[10px] px-2 py-1 rounded">Python, 1D CNN</span>
+                            </div>
+                            <div class="text-gray-600 text-sm">
+                                <span data-lang="zh">透過 MFCC 提取特徵並訓練模型，實現在極低延遲下對音訊流的情感辨識，體現了對即時序列數據處理的掌握。</span>
+                                <span data-lang="en">Implemented feature extraction and low-latency acoustic classification, demonstrating expertise in handling real-time sequential data.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section id="skills" class="mb-16">
+                    <h2 class="section-title">
+                        <span data-lang="zh">技術技能</span><span data-lang="en">Technical Skills</span>
+                    </h2>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm font-semibold">Python</span>
+                            <span class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm font-semibold">C / C++</span>
+                            <span class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm font-semibold">Flutter</span>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-white border-t border-gray-100 py-10 mt-20 text-center text-gray-400 text-xs">
+        <p>&copy; 2025 YUHAO WU (吳予皓). National Tsing Hua University (NTHU).</p>
+    </div>
+
+    <script>
+        let currentLang = 'zh';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                if (el.getAttribute('data-lang') === currentLang) {
+                    el.style.display = 'inline-block';
+                    if (['P', 'DIV', 'SECTION'].includes(el.tagName)) el.style.display = 'block';
+                } else {
+                    el.style.display = 'none';
+                }
+            });
+            document.getElementById('langBtnText').innerText = currentLang === 'zh' ? 'English' : '中文';
+        }
+
+        window.onload = updateDisplay;
+    </script>
+</body>
+</html>
